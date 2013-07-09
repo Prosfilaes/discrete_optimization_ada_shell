@@ -1,0 +1,15 @@
+This is basic Ada code to solve problems in the Coursera Discrete Optimization
+class. There's no algorithm code here, but simply a reusable structure that
+includes a timer.
+
+As an added bonus(?), there's half-complete Ada bindings to the GNU Linear
+Programming Kit. It's a thin binding, mostly automatically generated, but some
+macros are filled in (the one's I needed) and necessary types and pointer ->
+array argument fixes are installed, again where I needed them.
+
+The license for the bindings is under the original GNU GPL version 3. The rest
+... don't post it with class algorithm code in it. If you want to fork it for
+class and put it online, go ahead, but I'd appreciate notification. If you
+actually want to use some of it for out of class purposes, I suspect it will
+end up unrecognizable. Again, I'd appreciate notification, but go ahead and use
+it; I don't require any sort of credit or notice in the code.
