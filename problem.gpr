@@ -1,0 +1,27 @@
+project TSP is
+
+   for Source_Dirs use ("src");
+   for Object_Dir use "obj";
+   for Main use ("solver.adb");
+   for Source_Files use ("problem.adb", "problem.ads", "solver.adb", "output.adb", "output.ads", "input.ads", "input.adb", "calculations.ads", "calculations.adb", "glpk_h.ads");
+
+   package Builder is
+      for Default_Switches ("ada") use ("-s");
+   end Builder;
+
+   package Compiler is
+      for Default_Switches ("ada") use ("-gnatf", "-gnatwal", "-g", "-gnata", "-gnato2", "-gnat2012", "-fprofile-arcs", "-ftest-coverage");
+--      for Default_Switches ("ada") use ("-gnatf", "-gnatwal", "-g", "-gnata", "-gnato2", "-gnat2012", "-gnatwl", "-O3");
+   end Compiler;
+
+   package Binder is
+      for Default_Switches ("ada") use ("-E");
+   end Binder;
+
+   package Linker is
+      for Default_Switches ("ada") use ("-fprofile-arcs", "-ftest-coverage", "-lglpk");
+--	for Default_Switches ("ada") use ("-lglpk");
+   end Linker;
+
+end TSP;
+
